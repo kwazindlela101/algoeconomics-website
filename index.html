@@ -1,12 +1,11 @@
-    
 
-```html
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoEconomics | Global Markets. UK & African Relevance. AI-Powered Insight.</title>
+    <title>AlgoEconomics | AI-Powered African & UK Market Intelligence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -195,7 +194,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            margin-top: 60px; /* Added to account for fixed header */
+            margin-top: 60px;
         }
 
         .hero::before {
@@ -235,7 +234,51 @@
             opacity: 0.9;
         }
 
-        /* FIXED BUTTON ALIGNMENT */
+        /* ENHANCED CTAs */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold), #f7ef8a);
+            padding: 3rem 0;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary), #0f1f38);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+
         .hero-buttons {
             display: flex;
             gap: 1rem;
@@ -279,6 +322,128 @@
         .btn-outline:hover {
             background: var(--gold);
             color: var(--primary);
+        }
+
+        /* SPEAKER FEATURES */
+        .speakers-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .speaker-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .speaker-image {
+            height: 250px;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .speaker-content {
+            padding: 1.5rem;
+        }
+
+        .speaker-role {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .speaker-expertise {
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin: 0.5rem 0;
+            display: inline-block;
+        }
+
+        /* EVENTS SECTION */
+        .events-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold);
+        }
+
+        .event-date {
+            background: var(--gold);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* URGENCY ELEMENTS */
+        .urgency-badge {
+            background: #e53e3e;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* TESTIMONIALS */
+        .testimonial-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary), #0f1f38);
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         /* African Markets Section */
@@ -687,57 +852,6 @@
             color: var(--secondary);
         }
 
-        /* Newsletter Section */
-        .newsletter {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-
-        .newsletter::before {
-            content: '💷 📈 💰';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2rem;
-            opacity: 0.1;
-        }
-
-        .newsletter h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .newsletter-form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            border: 2px solid transparent;
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
         /* Premium Services Section */
         .premium-services {
             padding: 100px 0;
@@ -800,16 +914,55 @@
             gap: 2rem;
         }
 
-        /* Premium Signup Section */
-        .premium-signup {
+        /* Newsletter Section */
+        .newsletter {
             padding: 100px 0;
-            background: white;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
         }
 
-        .signup-form {
+        .newsletter::before {
+            content: '💷 📈 💰';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.1;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
             max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 2px solid transparent;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--gold);
         }
 
         /* About Section */
@@ -1145,6 +1298,11 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            /* Speaker section mobile */
+            .speaker-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1193,12 +1351,12 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#african-markets">African Markets</a></li>
+                    <li><a href="#speakers">Experts</a></li>
+                    <li><a href="#webinars">Events</a></li>
+                    <li><a href="#african-markets">Markets</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#premium">Premium</a></li>
                     <li><a href="#newsletter">Newsletter</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Insights</a></li>
                 </ul>
                 <button class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -1207,15 +1365,188 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ENHANCED HERO WITH POWERFUL CTA -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Global Markets. UK & African Relevance. AI-Powered Insight.</h1>
                 <p>Algorithmically curated economic news with direct impact on UK and African markets. Stay ahead with smarter, faster insights powered by AI.</p>
-                <div class="hero-buttons">
-                    <a href="#premium" class="btn">Start Premium Trial</a>
-                    <a href="#newsletter" class="btn btn-outline">Free Newsletter</a>
+                
+                <!-- URGENT CTA BANNER -->
+                <div class="cta-banner">
+                    <h3>🚀 Join 500+ Investors Getting AI-Powered African Market Insights</h3>
+                    <p>Limited spots available for our next exclusive webinar with Central Bank economists</p>
+                    <div class="hero-buttons">
+                        <a href="#premium" class="cta-button">
+                            <i class="fas fa-rocket"></i> Start Premium Trial - Limited Time
+                            <span class="urgency-badge">20 spots left</span>
+                        </a>
+                        <a href="#webinars" class="cta-button secondary">
+                            <i class="fas fa-video"></i> Join Free Webinar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SPEAKERS SECTION -->
+    <section id="speakers" class="speakers-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Expert Speakers</h2>
+                <p>Learn directly from leading economists and market specialists</p>
+            </div>
+
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="speaker-content">
+                        <h3>Dr. Adebayo Johnson</h3>
+                        <div class="speaker-role">Former Central Bank of Nigeria Economist</div>
+                        <div class="speaker-expertise">Monetary Policy & FX Markets</div>
+                        <p>15+ years experience in African central banking and currency markets.</p>
+                        <a href="#speaker-adebayo" class="cta-button" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fas fa-calendar"></i> Book Session
+                        </a>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="speaker-content">
+                        <h3>Sarah Chen</h3>
+                        <div class="speaker-role">African Fintech Investment Director</div>
+                        <div class="speaker-expertise">Tech Investments & Startups</div>
+                        <p>Managed $200M+ in African tech investments across 15 countries.</p>
+                        <a href="#speaker-sarah" class="cta-button" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fas fa-calendar"></i> Book Session
+                        </a>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="speaker-content">
+                        <h3>James Okafor</h3>
+                        <div class="speaker-role">Commodities Trading Expert</div>
+                        <div class="speaker-expertise">Mining & Natural Resources</div>
+                        <p>Specialist in African mineral resources and global supply chains.</p>
+                        <a href="#speaker-james" class="cta-button" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            <i class="fas fa-calendar"></i> Book Session
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPEAKER CTA -->
+            <div class="cta-section">
+                <h3>Want to Learn From These Experts?</h3>
+                <p>Get exclusive access to live sessions, Q&A, and premium content</p>
+                <a href="#premium" class="cta-button">
+                    <i class="fas fa-crown"></i> Join Premium for Expert Access
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING EVENTS SECTION -->
+    <section id="webinars" class="events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events & Webinars</h2>
+                <p>Live sessions with market experts - Limited seating available</p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date">March 28, 2025 | 2:00 PM GMT</div>
+                <h3>Nigerian Elections & Market Impact Analysis</h3>
+                <p><strong>Featuring:</strong> Dr. Adebayo Johnson & Sarah Chen</p>
+                <p>Live analysis of election outcomes and immediate market implications for Nigerian assets and currency.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#register" class="cta-button">
+                        <i class="fas fa-ticket-alt"></i> Reserve Your Spot (Free)
+                    </a>
+                    <a href="#premium" class="cta-button secondary">
+                        <i class="fas fa-crown"></i> Premium Early Access
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date">April 5, 2025 | 3:00 PM GMT</div>
+                <h3>East African Tech Investment Opportunities</h3>
+                <p><strong>Featuring:</strong> Sarah Chen & James Okafor</p>
+                <p>Deep dive into Kenya, Rwanda, and Ethiopia's booming tech sectors and investment landscape.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#register" class="cta-button">
+                        <i class="fas fa-ticket-alt"></i> Reserve Your Spot (Free)
+                    </a>
+                    <a href="#premium" class="cta-button secondary">
+                        <i class="fas fa-crown"></i> Premium Early Access
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGIC CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make Smarter African Market Decisions?</h2>
+            <p>Join investors and businesses who are already using our AI-powered insights</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="#premium" class="cta-button">
+                    <i class="fas fa-rocket"></i> Start 7-Day Premium Trial
+                </a>
+                <a href="#webinars" class="cta-button secondary">
+                    <i class="fas fa-video"></i> Attend Free Webinar
+                </a>
+                <a href="#speakers" class="cta-button secondary">
+                    <i class="fas fa-users"></i> Meet Our Experts
+                </a>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                🔒 No credit card required for trial • Cancel anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Investors & Businesses</h2>
+                <p>See what our community says about AlgoEconomics</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The AI insights on Nigerian markets helped us avoid a 15% portfolio loss. Worth every penny."</p>
+                    <div style="margin-top: 1rem;">
+                        <strong>Michael Rodriguez</strong>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Portfolio Manager, London</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The expert webinars alone are worth the subscription. Direct access to central bankers is invaluable."</p>
+                    <div style="margin-top: 1rem;">
+                        <strong>Sarah Goldstein</strong>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Trade Finance Director</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"We've doubled our African investments using AlgoEconomics insights. The data is ahead of the market."</p>
+                    <div style="margin-top: 1rem;">
+                        <strong>David Chen</strong>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Investment Fund Partner</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1593,7 +1924,9 @@
                         </li>
                     </ul>
                     
-                    <a href="#premium-signup" class="btn" style="background: var(--gold); color: var(--primary); width: 100%;">Start Free Trial</a>
+                    <a href="#premium-signup" class="cta-button" style="width: 100%;">
+                        <i class="fas fa-rocket"></i> Start Free Trial
+                    </a>
                     <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem;">7-day free trial, then £25/month</p>
                 </div>
 
@@ -1632,7 +1965,9 @@
                         </li>
                     </ul>
                     
-                    <a href="#premium-signup" class="btn" style="background: var(--primary); color: white; width: 100%;">Start Free Trial</a>
+                    <a href="#premium-signup" class="cta-button" style="background: var(--primary); color: white; width: 100%;">
+                        <i class="fas fa-crown"></i> Start Free Trial
+                    </a>
                     <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem;">7-day free trial, then £85/month</p>
                 </div>
             </div>
@@ -1681,7 +2016,7 @@
                                     <option value="enterprise" style="color: var(--dark);">Enterprise - £85/month</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn" style="background: var(--gold); color: var(--primary); width: 100%; font-size: 1.1rem;">
+                            <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1rem;">
                                 Start 7-Day Free Trial
                             </button>
                             <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 1rem;">
@@ -1784,6 +2119,18 @@
         </div>
     </section>
 
+    <!-- FINAL CONVERSION CTA -->
+    <section class="cta-banner" style="margin: 0;">
+        <div class="container">
+            <h3>🚀 Don't Miss Out - Limited Premium Spots Available</h3>
+            <p>Join now and get immediate access to all expert webinars, AI dashboards, and premium research</p>
+            <a href="#premium" class="cta-button">
+                <i class="fas fa-crown"></i> Start Your Premium Trial Now
+                <span class="urgency-badge">Only 15 spots left this month</span>
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -1802,11 +2149,12 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#speakers">Expert Speakers</a></li>
+                        <li><a href="#webinars">Events</a></li>
                         <li><a href="#african-markets">African Markets</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#premium">Premium</a></li>
                         <li><a href="#newsletter">Newsletter</a></li>
-                        <li><a href="#about">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1861,10 +2209,18 @@
                     }
                 });
             });
+
+            // Enhanced JavaScript for CTAs
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // You can add analytics tracking here
+                    console.log('CTA clicked:', this.textContent);
+                });
+            });
         });
     </script>
 </body>
 </html>
 
-       
-           
+
+
