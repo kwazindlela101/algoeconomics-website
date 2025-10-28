@@ -1,4 +1,7 @@
 
+
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -973,6 +976,18 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
             }
 
             .mobile-menu {
@@ -1451,12 +1466,14 @@
     <!-- Newsletter Section -->
     <section id="newsletter" class="newsletter">
         <div class="container">
-            <h2>Stay Ahead of Market Trends</h2>
-            <p>Subscribe to our daily newsletter for AI-powered economic insights delivered to your inbox, covering both UK and African markets.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit" class="btn">Subscribe</button>
-            </form>
+            <h2>Stay Ahead with AlgoEconomics</h2>
+            <p>Weekly insights on UK and African economies — powered by AI, curated for clarity.</p>
+            <!-- Replace with your actual Beehiiv embed link -->
+            <iframe src="https://embeds.beehiiv.com/youractualembedlink" 
+                    height="52" 
+                    style="border:none;width:100%;max-width:600px;margin:0 auto;display:block;" 
+                    scrolling="no">
+            </iframe>
         </div>
     </section>
 
@@ -1531,83 +1548,41 @@
             </div>
         </div>
     </section>
-    <section id="newsletter">
-  <div class="container">
-    <h2>Subscribe to AlgoEconomics</h2>
-    <p>Get weekly insights on UK and African economies — powered by AI, curated for clarity.</p>
-    <iframe src="https://your-beehiiv-subscribe-link" height="52" style="border:none;width:100%;max-width:600px;" scrolling="no"></iframe>
-  </div>
-</section>
-<section id="newsletter" style="background-color:#f5f5f5; padding: 60px 20px; text-align: center;">
-  <div class="container">
-    <h2 style="font-size: 2em; margin-bottom: 10px; color: #1a1a1a;">Subscribe to AlgoEconomics</h2>
-    <p style="font-size: 1.1em; margin-bottom: 30px; color: #555;">
-      Get weekly insights on UK and African economies — powered by AI, curated for clarity.
-    </p>
-    <iframe src="https://your-beehiiv-subscribe-link" height="52" style="border:none;width:100%;max-width:600px;" scrolling="no"></iframe>
-  </div>
-</section>
 
-<section id="newsletter" style="background-color:#f9f9f9; padding: 60px 20px; text-align: center;">
-  <div class="container" style="max-width: 700px; margin: 0 auto;">
-    <h2 style="font-size: 2.4em; font-weight: 600; margin-bottom: 15px; color: #222;">Stay Ahead with AlgoEconomics</h2>
-    <p style="font-size: 1.2em; margin-bottom: 30px; color: #555;">
-      Subscribe for weekly insights on UK and African economies — powered by AI, curated for clarity.
-    </p>
-    <iframe src="https://your-beehiiv-subscribe-link" height="52" style="border:none;width:100%;" scrolling="no"></iframe>
-  </div>
-</section>
-<section id="newsletter" class="section">
-  <div class="container">
-    <h2>Stay Ahead with AlgoEconomics</h2>
-    <p>Weekly insights on UK and African economies — powered by AI, curated for clarity.</p>
-    <iframe src="https://your-beehiiv-subscribe-link" height="52" style="border:none;width:100%;max-width:600px;" scrolling="no"></iframe>
-  </div>
-</section>
-<!-- Footer -->
-<footer id="contact">
-
-<!-- Footer -->
-<footer id="contact">
-<!-- Footer -->
-<footer id="contact">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>AlgoEconomics</h3>
-                <p>AI-powered economic insights for UK and African markets.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AlgoEconomics</h3>
+                    <p>AI-powered economic insights for UK and African markets.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#african-markets">African Markets</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Open Source</h3>
+                    <p>
+                        <a href="https://github.com/kwazindlela101/algoeconomics-website" target="_blank">
+                            <img src="https://img.shields.io/badge/View%20on-GitHub-blue?logo=github" alt="View on GitHub">
+                        </a>
+                    </p>
                 </div>
             </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#african-markets">African Markets</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#newsletter">Newsletter</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Open Source</h3>
-                <p>
-                    <a href="https://github.com/kwazindlela101/algoeconomics-website" target="_blank">
-                        <img src="https://img.shields.io/badge/View%20on-GitHub-blue?logo=github" alt="View on GitHub">
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-    
-                       
-                 
+            <div class="footer-bottom">
                 <p>&copy; 2025 AlgoEconomics. All rights reserved. | UK & African Market Intelligence</p>
             </div>
         </div>
@@ -1621,9 +1596,16 @@
             
             if (mobileMenu) {
                 mobileMenu.addEventListener('click', function() {
-                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                    navLinks.classList.toggle('active');
                 });
             }
+
+            // Close mobile menu when clicking links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
 
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1642,9 +1624,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
