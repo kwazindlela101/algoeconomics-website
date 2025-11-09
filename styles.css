@@ -1,11 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-section, header, footer {
+  font-family: sans-serif;
   padding: 2rem;
   text-align: center;
 }
@@ -20,17 +14,3 @@ section, header, footer {
   opacity: 1;
   transform: translateY(0);
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #0077cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
