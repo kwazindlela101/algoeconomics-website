@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JavaScript is working!");
+  console.log("JS is working!");
 
   const fadeEls = document.querySelectorAll(".fade-in");
 
@@ -13,5 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Trigger on load
+  revealOnScroll();
 });
