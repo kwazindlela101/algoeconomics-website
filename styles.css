@@ -193,6 +193,65 @@ section h2 {
 }
 
 /* Pricing */
+/* Pricing Section */
+.pricing-section {
+  padding: 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Monetization Timeline Section */
+.monetization-timeline {
+  padding: 2rem;
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.monetization-timeline h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+
+.monetization-timeline .section-intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.timeline-block {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.timeline-block h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-block p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
 .pricing-section {
   padding: 2rem;
   background-color: #ffffff;
