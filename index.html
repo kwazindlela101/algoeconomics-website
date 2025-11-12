@@ -3,178 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlgoEconomics</title>
+  <title>AlgoEconomics - Premium Economic Intelligence</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Your content here -->
-  <script>
-  const faders = document.querySelectorAll('.fade-in');
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Algo<span>Economics</span></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#what-it-does">What It Does</a></li>
+          <li><a href="#trust-impact">Trust & Impact</a></li>
+          <li><a href="#audience">Who It's For</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#features">Strategic Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
 
-  const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  };
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container fade-in">
+      <h1>Premium Economic Intelligence for UK–Africa Decision-Makers</h1>
+      <p>Blending automation, strategic segmentation, and modular design to help clients act faster, communicate smarter, and lead with data.</p>
+    </div>
+  </section>
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>About AlgoEconomics</h2>
+      </div>
+      <div class="content-card fade-in">
+        <p>
+          AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>.
+          It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients 
+          <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.
+        </p>
+        <p>
+          Founded with a vision to spotlight Africa's economic potential and bridge global insights with local relevance, 
+          AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-</script>
+  <!-- What It Does Section -->
+  <section id="what-it-does" class="feature-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>What the AI Corruption Index Does</h2>
+      </div>
+      <div class="content-card fade-in">
+        <ul class="feature-list">
+          <li>
+            <strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.
+          </li>
+          <li>
+            <strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- Trust & Impact Section -->
+  <section id="trust-impact" class="feature-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Built for Trust & Impact</h2>
+      </div>
+      <div class="content-card fade-in">
+        <ul class="feature-list">
+          <li>Multi-source data validation</li>
+          <li>Transparent scoring with risk trails</li>
+          <li>Human-in-the-loop oversight for ethics</li>
+          <li>AI-enhanced signals aligned with global standards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience Section -->
+  <section id="audience" class="feature-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Who It's For</h2>
+      </div>
+      <div class="content-card fade-in">
+        <ul class="feature-list">
+          <li>Finance ministries seeking governance-adjusted investment and aid strategies</li>
+          <li>Government agencies designing policy and procurement frameworks</li>
+          <li>Civic tech partners building corruption early warning systems</li>
+          <li>Ethics and compliance teams clarifying ESG and reputational risk</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers Section -->
+  <section id="speakers" class="speakers-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Featured Speakers & Collaborators</h2>
+      </div>
+      <div class="speaker-grid">
+        <div class="speaker-card fade-in">
+          <div class="speaker-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Daniel Ndlela</h3>
+          <p>Daniel Ndlela has worked in most sub-regions of Africa, mainly on economic development, trade policy, industrialisation and regional economic cooperation.</p>
+        </div>
+
+        <div class="speaker-card fade-in">
+          <div class="speaker-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Dr. Amina Yusuf</h3>
+          <p>Governance reform expert. Advisor on ethical AI and public sector innovation across West Africa.</p>
+        </div>
+
+        <div class="speaker-card fade-in">
+          <div class="speaker-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>James Okoro</h3>
+          <p>Civic tech leader. Builds corruption early warning systems for local governments and NGOs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Strategic Features</h2>
+      </div>
+      <div class="content-card fade-in">
+        <ul class="feature-list">
+          <li>Real-time corruption risk dashboards</li>
+          <li>Segmented intelligence by region, sector, and institution</li>
+          <li>Branded reports with automation-ready insights</li>
+          <li>Modular scoring and compliance overlays</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Contact AlgoEconomics</h2>
+        <p>Interested in early access, collaboration, or learning more? Reach out below and we'll be in touch.</p>
+      </div>
+      <div class="content-card fade-in">
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top fade-in">
+        <h3>AlgoEconomics</h3>
+        <p>Premium economic intelligence for UK–Africa decision-makers.</p>
+      </div>
+
+      <div class="footer-links fade-in">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#what-it-does">What It Does</a></li>
+          <li><a href="#features">Strategic Features</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom fade-in">
+        <p>&copy; 2025 AlgoEconomics. All rights reserved.</p>
+        <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<header class="site-header">
-  <div class="container">
-   <link rel="stylesheet" href="styles.css" />
- <h1>AlgoEconomics</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#what-it-does">What It Does</a></li>
-        <li><a href="#trust-impact">Trust & Impact</a></li>
-        <li><a href="#audience">Who It's For</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#features">Strategic Features</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About AlgoEconomics</h2>
-    <p>
-      AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>.
-      It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients 
-      <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.
-    </p>
-    <p>
-      Founded with a vision to spotlight Africa’s economic potential and bridge global insights with local relevance, 
-      AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.
-    </p>
-  </div>
-</section>
-<section id="what-it-does" class="feature-section">
-  <div class="container">
-    <h2>What the AI Corruption Index Does</h2>
-    <ul>
-      <li>
-        <strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.
-      </li>
-      <li>
-        <strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.
-      </li>
-    </ul>
-  </div>
-</section>
-<section id="trust-impact" class="feature-section">
-  <div class="container">
-    <h2>Built for Trust & Impact</h2>
-    <ul>
-      <li>Multi-source data validation</li>
-      <li>Transparent scoring with risk trails</li>
-      <li>Human-in-the-loop oversight for ethics</li>
-      <li>AI-enhanced signals aligned with global standards</li>
-    </ul>
-  </div>
-</section>
-<section id="audience" class="feature-section">
-  <div class="container">
-    <h2>Who It's For</h2>
-    <ul>
-      <li>Finance ministries seeking governance-adjusted investment and aid strategies</li>
-      <li>Government agencies designing policy and procurement frameworks</li>
-      <li>Civic tech partners building corruption early warning systems</li>
-      <li>Ethics and compliance teams clarifying ESG and reputational risk</li>
-    </ul>
-  </div>
-</section>
-<section id="speakers" class="speakers-section">
-  <div class="container">
-    <h2>Featured Speakers & Collaborators</h2>
-    <div class="speaker-grid">
-      
-      <div class="speaker-card">
-        <h3> Daniel Ndlela</h3>
-        <p> Daniel Ndlela has worked in most sub-regions of Africa, mainly on economic development, trade policy, industrialisation and regional economic cooperation </p>
-      </div>
-
-      <div class="speaker-card">
-        <h3>Dr. Amina Yusuf</h3>
-        <p>Governance reform expert. Advisor on ethical AI and public sector innovation across West Africa.</p>
-      </div>
-
-      <div class="speaker-card">
-        <h3>James Okoro</h3>
-        <p>Civic tech leader. Builds corruption early warning systems for local governments and NGOs.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section id="features" class="features-section">
-  <div class="container">
-    <h2>Strategic Features</h2>
-    <ul>
-      <li>Real-time corruption risk dashboards</li>
-      <li>Segmented intelligence by region, sector, and institution</li>
-      <li>Branded reports with automation-ready insights</li>
-      <li>Modular scoring and compliance overlays</li>
-    </ul>
-  </div>
-</section>
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>Contact AlgoEconomics</h2>
-    <p>Interested in early access, collaboration, or learning more? Reach out below and we’ll be in touch.</p>
-
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </div>
-</section>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <h3>AlgoEconomics</h3>
-      <p>Premium economic intelligence for UK–Africa decision-makers.</p>
-    </div>
-
-    <div class="footer-links">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#what-it-does">What It Does</a></li>
-        <li><a href="#features">Strategic Features</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2025 AlgoEconomics. All rights reserved.</p>
-      <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Use</a></p>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
