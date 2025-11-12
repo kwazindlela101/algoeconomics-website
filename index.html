@@ -1,296 +1,712 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoEconomics | Premium Economic Intelligence</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Algo<span>Economics</span></h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about" class="active">About</a></li>
-                    <li><a href="#what-it-does">What It Does</a></li>
-                    <li><a href="#trust-impact">Trust & Impact</a></li>
-                    <li><a href="#audience">Who It's For</a></li>
-                    <li><a href="#speakers">Speakers</a></li>
-                    <li><a href="#features">Strategic Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+/* CSS Variables for Financial Theme */
+:root {
+    --primary: #1a2b4c;
+    --secondary: #2c5aa0;
+    --accent: #00a896;
+    --gold: #d4af37;
+    --light: #f8f9fa;
+    --dark: #0d1525;
+    --text: #333;
+    --gray: #6c757d;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+    --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Premium Economic Intelligence for UK–Africa Decision-Makers</h1>
-                <p>Blending automation, strategic segmentation, and modular design to help clients act faster, communicate smarter, and lead with data.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Request Demo</a>
-                    <a href="#about" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <h3>24/7</h3>
-                    <p>Real-time Monitoring</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3>95%</h3>
-                    <p>Prediction Accuracy</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3>50+</h3>
-                    <p>Countries Covered</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3>100+</h3>
-                    <p>Economic Indicators</p>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #f5f7fa;
+    overflow-x: hidden;
+}
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>About AlgoEconomics</h2>
-                <p>Transforming economic intelligence through advanced algorithms and data-driven insights</p>
-            </div>
-            <div class="content-card fade-in">
-                <h3><i class="fas fa-chart-line"></i> Our Mission</h3>
-                <p>
-                    AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>.
-                    It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients 
-                    <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.
-                </p>
-                <p>
-                    Founded with a vision to spotlight Africa's economic potential and bridge global insights with local relevance, 
-                    AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.
-                </p>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-    <!-- What It Does Section -->
-    <section id="what-it-does" class="feature-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>What the AI Corruption Index Does</h2>
-                <p>Advanced detection and prediction capabilities for economic governance</p>
-            </div>
-            <div class="content-card fade-in">
-                <h3><i class="fas fa-search"></i> Detection & Analysis</h3>
-                <ul class="feature-list">
-                    <li>
-                        <strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.
-                    </li>
-                    <li>
-                        <strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+/* Header Styles */
+.site-header {
+    background: rgba(26, 43, 76, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
 
-    <!-- Trust & Impact Section -->
-    <section id="trust-impact" class="feature-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Built for Trust & Impact</h2>
-                <p>Transparent methodology with ethical oversight</p>
-            </div>
-            <div class="content-card fade-in">
-                <h3><i class="fas fa-shield-alt"></i> Our Framework</h3>
-                <ul class="feature-list">
-                    <li>Multi-source data validation</li>
-                    <li>Transparent scoring with risk trails</li>
-                    <li>Human-in-the-loop oversight for ethics</li>
-                    <li>AI-enhanced signals aligned with global standards</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.site-header.scrolled {
+    box-shadow: var(--shadow);
+}
 
-    <!-- Audience Section -->
-    <section id="audience" class="feature-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Who It's For</h2>
-                <p>Serving decision-makers across government, finance, and civil society</p>
-            </div>
-            <div class="content-card fade-in">
-                <h3><i class="fas fa-users"></i> Target Audience</h3>
-                <ul class="feature-list">
-                    <li>Finance ministries seeking governance-adjusted investment and aid strategies</li>
-                    <li>Government agencies designing policy and procurement frameworks</li>
-                    <li>Civic tech partners building corruption early warning systems</li>
-                    <li>Ethics and compliance teams clarifying ESG and reputational risk</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
 
-    <!-- Speakers Section -->
-    <section id="speakers" class="speakers-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Featured Speakers & Collaborators</h2>
-                <p>Leading experts in economics, governance, and technology</p>
-            </div>
-            <div class="speaker-grid">
-                <div class="speaker-card fade-in">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Daniel Ndlela</h3>
-                    <p class="position">Economic Development Expert</p>
-                    <p>Daniel Ndlela has worked in most sub-regions of Africa, mainly on economic development, trade policy, industrialisation and regional economic cooperation.</p>
-                </div>
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-                <div class="speaker-card fade-in">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Dr. Amina Yusuf</h3>
-                    <p class="position">Governance Reform Expert</p>
-                    <p>Advisor on ethical AI and public sector innovation across West Africa with 15+ years experience in governance and policy reform.</p>
-                </div>
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
 
-                <div class="speaker-card fade-in">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>James Okoro</h3>
-                    <p class="position">Civic Tech Leader</p>
-                    <p>Builds corruption early warning systems for local governments and NGOs, with a focus on transparency and citizen engagement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo span {
+    color: var(--accent);
+}
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Strategic Features</h2>
-                <p>Comprehensive tools for economic intelligence and analysis</p>
-            </div>
-            <div class="content-card fade-in">
-                <h3><i class="fas fa-cogs"></i> Platform Capabilities</h3>
-                <ul class="feature-list">
-                    <li>Real-time corruption risk dashboards</li>
-                    <li>Segmented intelligence by region, sector, and institution</li>
-                    <li>Branded reports with automation-ready insights</li>
-                    <li>Modular scoring and compliance overlays</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Contact AlgoEconomics</h2>
-                <p>Interested in early access, collaboration, or learning more? Reach out below and we'll be in touch.</p>
-            </div>
-            <div class="content-card fade-in">
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="organization">Organization</label>
-                        <input type="text" id="organization" name="organization" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="interest">Primary Interest</label>
-                        <select id="interest" name="interest" required>
-                            <option value="">Select an option</option>
-                            <option value="demo">Request a Demo</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="research">Research Collaboration</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+.main-nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    position: relative;
+}
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>AlgoEconomics</h3>
-                    <p>Premium economic intelligence for UK–Africa decision-makers. Transforming data into actionable insights for economic governance and growth.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#what-it-does">What It Does</a></li>
-                        <li><a href="#features">Strategic Features</a></li>
-                        <li><a href="#speakers">Speakers</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">AI Corruption Index</a></li>
-                        <li><a href="#">Economic Forecasting</a></li>
-                        <li><a href="#">Risk Assessment</a></li>
-                        <li><a href="#">Custom Reports</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-envelope"></i> contact@algoeconomics.org</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> +1 (555) 123-4567</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> London, UK & Accra, Ghana</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AlgoEconomics. All rights reserved.</p>
-                <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Use</a></p>
-            </div>
-        </div>
-    </footer>
+.main-nav a:hover, .main-nav a.active {
+    color: white;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: var(--transition);
+}
+
+.main-nav a:hover::after, .main-nav a.active::after {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--gradient);
+    color: white;
+    padding: 10rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Section Styling */
+section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.section-title p {
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Content Cards */
+.content-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    border-top: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.content-card h3 i {
+    margin-right: 10px;
+    color: var(--accent);
+}
+
+.content-card p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Feature Lists */
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding-left: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    background: rgba(0, 168, 150, 0.1);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Speaker Grid */
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.speaker-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.speaker-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+
+.speaker-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.speaker-card .position {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.speaker-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--light);
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stat-item p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: var(--transition);
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.2);
+    background: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #1f4a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: var(--accent);
+}
+
+.btn-primary:hover {
+    background: #008a7a;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--dark);
+    color: white;
+    padding: 4rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: var(--accent);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional styles for JavaScript features */
+
+/* Active navigation state */
+.main-nav a.active {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.scroll-to-top:hover {
+    background: #1f4a8a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.notification:hover {
+    opacity: 0.9;
+}
+
+.notification-success {
+    background: #27ae60;
+}
+
+.notification-error {
+    background: #e74c3c;
+}
+
+.notification-info {
+    background: #3498db;
+}
+
+/* Form validation styles */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+    border-color: #e74c3c;
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid {
+    border-color: #27ae60;
+}
+
+/* Enhanced mobile menu animation */
+.main-nav ul {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .main-nav.active ul {
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: var(--shadow);
+        padding: 1rem;
+        gap: 0;
+    }
+
+    .main-nav.active ul {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 8rem 0 4rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .content-card {
+        padding: 2rem;
+    }
+    
+    .footer-links ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .speaker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
+}
