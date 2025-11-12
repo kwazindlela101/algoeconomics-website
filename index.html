@@ -4,358 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlgoEconomics | Premium Economic Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* CSS Variables for Financial Theme */
-        :root {
-            --primary: #1a2b4c;
-            --secondary: #2c5aa0;
-            --accent: #00a896;
-            --light: #f8f9fa;
-            --dark: #0d1525;
-            --text: #333;
-            --gray: #6c757d;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: #f5f7fa;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Header Styles */
-        .site-header {
-            background: var(--primary);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow);
-        }
-
-        .site-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .main-nav a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-            transition: var(--transition);
-            padding: 0.5rem 0;
-        }
-
-        .main-nav a:hover {
-            color: white;
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: var(--gradient);
-            color: white;
-            padding: 8rem 0 4rem;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 4rem 0;
-        }
-
-        section:nth-child(even) {
-            background: var(--light);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Content Cards */
-        .content-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-        }
-
-        .content-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .content-card h3 i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-
-        /* Feature Lists */
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-
-        .feature-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Speaker Grid */
-        .speaker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .speaker-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-
-        .speaker-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .speaker-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: var(--light);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--secondary);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--secondary);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .btn:hover {
-            background: #1f4a8a;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-        }
-
-        .btn-primary:hover {
-            background: #008a7a;
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        /* Footer */
-        .site-footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .main-nav ul {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Your existing HTML content goes here - I can see it's in your live site -->
+    <!-- Header -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -378,6 +31,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h1>Premium Economic Intelligence for UK–Africa Decision-Makers</h1>
@@ -389,6 +43,31 @@
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Real-time Monitoring</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Prediction Accuracy</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Countries Covered</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Economic Indicators</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-title">
@@ -397,12 +76,20 @@
             </div>
             <div class="content-card">
                 <h3><i class="fas fa-chart-line"></i> Our Mission</h3>
-                <p>AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>. It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.</p>
-                <p>Founded with a vision to spotlight Africa's economic potential and bridge global insights with local relevance, AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.</p>
+                <p>
+                    AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>.
+                    It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients 
+                    <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.
+                </p>
+                <p>
+                    Founded with a vision to spotlight Africa's economic potential and bridge global insights with local relevance, 
+                    AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- What It Does Section -->
     <section id="what-it-does">
         <div class="container">
             <div class="section-title">
@@ -412,13 +99,18 @@
             <div class="content-card">
                 <h3><i class="fas fa-search"></i> Detection & Analysis</h3>
                 <ul class="feature-list">
-                    <li><strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.</li>
-                    <li><strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.</li>
+                    <li>
+                        <strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.
+                    </li>
+                    <li>
+                        <strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- Trust & Impact Section -->
     <section id="trust-impact">
         <div class="container">
             <div class="section-title">
@@ -437,6 +129,7 @@
         </div>
     </section>
 
+    <!-- Audience Section -->
     <section id="audience">
         <div class="container">
             <div class="section-title">
@@ -455,6 +148,7 @@
         </div>
     </section>
 
+    <!-- Speakers Section -->
     <section id="speakers">
         <div class="container">
             <div class="section-title">
@@ -463,24 +157,36 @@
             </div>
             <div class="speaker-grid">
                 <div class="speaker-card">
-                    <div class="speaker-img"><i class="fas fa-user"></i></div>
+                    <div class="speaker-img">
+                        <i class="fas fa-user"></i>
+                    </div>
                     <h3>Daniel Ndlela</h3>
+                    <p class="position">Economic Development Expert</p>
                     <p>Daniel Ndlela has worked in most sub-regions of Africa, mainly on economic development, trade policy, industrialisation and regional economic cooperation.</p>
                 </div>
+
                 <div class="speaker-card">
-                    <div class="speaker-img"><i class="fas fa-user"></i></div>
+                    <div class="speaker-img">
+                        <i class="fas fa-user"></i>
+                    </div>
                     <h3>Dr. Amina Yusuf</h3>
-                    <p>Governance reform expert. Advisor on ethical AI and public sector innovation across West Africa.</p>
+                    <p class="position">Governance Reform Expert</p>
+                    <p>Advisor on ethical AI and public sector innovation across West Africa with 15+ years experience in governance and policy reform.</p>
                 </div>
+
                 <div class="speaker-card">
-                    <div class="speaker-img"><i class="fas fa-user"></i></div>
+                    <div class="speaker-img">
+                        <i class="fas fa-user"></i>
+                    </div>
                     <h3>James Okoro</h3>
-                    <p>Civic tech leader. Builds corruption early warning systems for local governments and NGOs.</p>
+                    <p class="position">Civic Tech Leader</p>
+                    <p>Builds corruption early warning systems for local governments and NGOs, with a focus on transparency and citizen engagement.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Features Section -->
     <section id="features">
         <div class="container">
             <div class="section-title">
@@ -499,6 +205,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="section-title">
@@ -507,27 +214,35 @@
             </div>
             <div class="content-card">
                 <form class="contact-form">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>AlgoEconomics</h3>
-                    <p>Premium economic intelligence for UK–Africa decision-makers.</p>
+                    <p>Premium economic intelligence for UK–Africa decision-makers. Transforming data into actionable insights for economic governance and growth.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -539,33 +254,31 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Corruption Index</a></li>
+                        <li><a href="#">Economic Forecasting</a></li>
+                        <li><a href="#">Risk Assessment</a></li>
+                        <li><a href="#">Custom Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> contact@algoeconomics.org</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +1 (555) 123-4567</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> London, UK & Accra, Ghana</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 AlgoEconomics. All rights reserved.</p>
+                <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Use</a></p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple mobile menu
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.main-nav ul').style.display = 
-                document.querySelector('.main-nav ul').style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
