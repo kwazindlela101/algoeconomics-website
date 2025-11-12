@@ -1,4 +1,4 @@
-/* Base Reset and Typography */
+/* === Base Reset and Typography === */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   padding: 1.5rem;
 }
 
-/* Header */
+/* === Header === */
 .site-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -24,7 +24,7 @@ body {
   color: #0077cc;
 }
 
-/* Navigation */
+/* === Navigation === */
 nav ul {
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero {
   text-align: center;
   background-color: #ffffff;
@@ -83,7 +83,7 @@ nav a:hover {
   opacity: 0.9;
 }
 
-/* Sections */
+/* === Sections === */
 section {
   margin-bottom: 3rem;
 }
@@ -99,7 +99,7 @@ section h2 {
   color: #555;
 }
 
-/* Premium Guide */
+/* === Premium Guide === */
 .premium-section {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -130,7 +130,7 @@ section h2 {
   font-size: 0.95rem;
 }
 
-/* Strategic Features */
+/* === Strategic Features === */
 .features-section {
   padding: 2rem;
   background-color: #ffffff;
@@ -161,7 +161,7 @@ section h2 {
   color: #444;
 }
 
-/* Speakers */
+/* === Speakers === */
 .speakers-section {
   padding: 2rem;
   background-color: #ffffff;
@@ -192,15 +192,50 @@ section h2 {
   color: #444;
 }
 
-/* Pricing */
-/* Pricing Section */
+/* === Pricing === */
 .pricing-section {
   padding: 2rem;
   background-color: #ffffff;
   text-align: center;
 }
 
-/* Monetization Timeline Section */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.pricing-card h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pricing-card li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* === Monetization Timeline === */
 .monetization-timeline {
   padding: 2rem;
   background-color: #ffffff;
@@ -245,101 +280,65 @@ section h2 {
   margin-bottom: 0.5rem;
 }
 
-/* Contact Section */
+/* === Contact === */
 #contact {
   text-align: center;
   padding: 2rem;
   background-color: #f9f9f9;
 }
 
-.pricing-section {
-  padding: 2rem;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.pricing-card {
-  background-color: #f0f0f0;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: left;
-}
-
-.pricing-card h3 {
-  color: #0077cc;
-  margin-bottom: 0.5rem;
-}
-
-.pricing-card .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.pricing-card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.pricing-card li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* Contact */
-#contact {
-  text-align: center;
-  padding: 2rem;
-  background-color: #f9f9f9;
-}
-
-/* Footer */
+/* === Footer === */
 footer {
   text-align: center;
   font-size: 0.9rem;
   color: #777;
   margin-top: 2rem;
 }
+
 /* === AI Corruption Index Section === */
 .corruption-index {
-  background: #f4f8fc;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
-  color: #222;
-}
-.corruption-index h2 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
-.corruption-index h3 {
-  font-size: 1.4em;
-  color: #555;
-  margin-bottom: 30px;
-}
-.corruption-index p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-.corruption-index h4 {
-  font-size: 1.3em;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-.corruption-index ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
-.corruption-index li {
-  margin-bottom: 10px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
+.corruption-index h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+
+.corruption-index h3 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.corruption-index p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.corruption-index h4 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+
+.corruption-index ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.corruption-index li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #444;
+}
