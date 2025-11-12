@@ -342,3 +342,34 @@ footer {
   font-size: 0.95rem;
   color: #444;
 }
+.site-header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #0077cc;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #0077cc;
+}
