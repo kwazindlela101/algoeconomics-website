@@ -727,3 +727,13 @@ footer {
         padding: 20px;
     }
 }
+/* Fix for company name/logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.logo span {
+    color: #e74c3c; /* Accent color */
+}
