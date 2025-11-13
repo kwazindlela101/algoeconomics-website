@@ -3,286 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoEconomics | Premium Economic Intelligence</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>AlgoEconomics - Economic Intelligence for the Algorithmic Age</title>
+    <meta name="description" content="Advanced economic intelligence platform delivering real-time insights, predictive analytics, and flagship tools like the AI Corruption Index for UK-Africa economic corridor.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+        }
+
+        /* Enterprise Section */
+        .enterprise-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .enterprise-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .enterprise-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        /* How It Works Section */
+        .how-it-works-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .how-it-works-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .workflow-steps {
+            max-width: 800px;
+            margin: 0 auto;
+            counter-reset: step-counter;
+        }
+
+        .workflow-steps li {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+            padding-left: 80px;
+            border: 1px solid #e9ecef;
+        }
+
+        .workflow-steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-steps li {
+                padding-left: 25px;
+            }
+
+            .workflow-steps li::before {
+                position: static;
+                transform: none;
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Algo<span>Economics</span></h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#what-it-does">What It Does</a></li>
-                    <li><a href="#trust-impact">Trust & Impact</a></li>
-                    <li><a href="#audience">Who It's For</a></li>
-                    <li><a href="#speakers">Speakers</a></li>
-                    <li><a href="#features">Strategic Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+    <header>
+        <nav class="container">
+            <div class="logo">AlgoEconomics</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#enterprise">Enterprise</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section id="home" class="hero">
         <div class="container">
-            <h1>Premium Economic Intelligence for UK–Africa Decision-Makers</h1>
-            <p>Blending automation, strategic segmentation, and modular design to help clients act faster, communicate smarter, and lead with data.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request Demo</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
-            </div>
+            <h1>Economic Intelligence for the Algorithmic Age</h1>
+            <p>Advanced analytics and predictive insights for the UK-Africa economic corridor. Powered by cutting-edge algorithms and real-time data.</p>
+            <a href="#enterprise" class="cta-button">Explore Enterprise Solutions</a>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Real-time Monitoring</p>
-                </div>
-                <div class="stat-item">
-                    <h3>95%</h3>
-                    <p>Prediction Accuracy</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Countries Covered</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100+</h3>
-                    <p>Economic Indicators</p>
-                </div>
+    <!-- Enterprise Section -->
+    <section id="enterprise" class="enterprise-section container">
+        <h2>Professional & Enterprise Intelligence</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem;">
+            AlgoEconomics is built for high-stakes decision-making. Whether you're a fintech innovator, trade analyst, or policy strategist, our platform delivers tailored insights, automation-ready reports, and flagship tools like the AI Corruption Index.
+        </p>
+
+        <div class="enterprise-features">
+            <div class="feature-box">
+                <h3>Segment-Specific Dashboards</h3>
+                <p>Real-time data for trade, finance, and governance — customized to your region and role.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Premium Reports & Forecasts</h3>
+                <p>Branded, automation-ready deliverables for internal strategy or external stakeholders.</p>
+            </div>
+            <div class="feature-box">
+                <h3>AI Corruption Index</h3>
+                <p>Our flagship innovation — quantifying governance risk across African markets.</p>
             </div>
         </div>
+
+        <div style="text-align: center;">
+            <a href="#contact" class="cta-button">Request Enterprise Access</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section container">
+        <h2>How AlgoEconomics Works</h2>
+        <ol class="workflow-steps">
+            <li><strong>Segment Selection:</strong> Choose your market focus — fintech, trade, governance, or policy.</li>
+            <li><strong>Data Integration:</strong> We pull real-time data from trusted sources and apply proprietary filters.</li>
+            <li><strong>Insight Generation:</strong> Our algorithms surface trends, risks, and opportunities tailored to your goals.</li>
+            <li><strong>Report Delivery:</strong> Receive branded, automation-ready reports via dashboard or email.</li>
+            <li><strong>Flagship Tools:</strong> Access innovations like the AI Corruption Index for deeper governance insights.</li>
+        </ol>
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="section-title">
-                <h2>About AlgoEconomics</h2>
-                <p>Transforming economic intelligence through advanced algorithms and data-driven insights</p>
-            </div>
-            <div class="content-card">
-                <h3><i class="fas fa-chart-line"></i> Our Mission</h3>
-                <p>
-                    AlgoEconomics delivers <strong>premium, real-time economic intelligence</strong> for <strong>UK–Africa decision-makers</strong>.
-                    It blends <strong>automation</strong>, <strong>strategic segmentation</strong>, and <strong>modular design</strong> to help clients 
-                    <em>act faster</em>, <em>communicate smarter</em>, and <em>lead with data</em>.
-                </p>
-                <p>
-                    Founded with a vision to spotlight Africa's economic potential and bridge global insights with local relevance, 
-                    AlgoEconomics is building the trusted intelligence platform for the next generation of leaders, investors, and changemakers.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- What It Does Section -->
-    <section id="what-it-does">
-        <div class="container">
-            <div class="section-title">
-                <h2>What the AI Corruption Index Does</h2>
-                <p>Advanced detection and prediction capabilities for economic governance</p>
-            </div>
-            <div class="content-card">
-                <h3><i class="fas fa-search"></i> Detection & Analysis</h3>
-                <ul class="feature-list">
-                    <li>
-                        <strong>Predicts Corruption Hotspots</strong> in public fund allocation — detects anomalies in budgeting, procurement, and disbursement to spotlight high-risk institutions and actors.
-                    </li>
-                    <li>
-                        <strong>Identifies Lower-Level Corruption</strong> in public service delivery — simplifies procedures and promotes access to accurate information to reduce entry-point corruption.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust & Impact Section -->
-    <section id="trust-impact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Built for Trust & Impact</h2>
-                <p>Transparent methodology with ethical oversight</p>
-            </div>
-            <div class="content-card">
-                <h3><i class="fas fa-shield-alt"></i> Our Framework</h3>
-                <ul class="feature-list">
-                    <li>Multi-source data validation</li>
-                    <li>Transparent scoring with risk trails</li>
-                    <li>Human-in-the-loop oversight for ethics</li>
-                    <li>AI-enhanced signals aligned with global standards</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Audience Section -->
-    <section id="audience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Who It's For</h2>
-                <p>Serving decision-makers across government, finance, and civil society</p>
-            </div>
-            <div class="content-card">
-                <h3><i class="fas fa-users"></i> Target Audience</h3>
-                <ul class="feature-list">
-                    <li>Finance ministries seeking governance-adjusted investment and aid strategies</li>
-                    <li>Government agencies designing policy and procurement frameworks</li>
-                    <li>Civic tech partners building corruption early warning systems</li>
-                    <li>Ethics and compliance teams clarifying ESG and reputational risk</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speakers Section -->
-    <section id="speakers">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Speakers & Collaborators</h2>
-                <p>Leading experts in economics, governance, and technology</p>
-            </div>
-            <div class="speaker-grid">
-                <div class="speaker-card">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Daniel Ndlela</h3>
-                    <p class="position">Economic Development Expert</p>
-                    <p>Daniel Ndlela has worked in most sub-regions of Africa, mainly on economic development, trade policy, industrialisation and regional economic cooperation.</p>
+            <h2>About AlgoEconomics</h2>
+            <div class="about-content">
+                <div>
+                    <h3>A New Economic Science</h3>
+                    <p>AlgoEconomics represents a paradigm shift in economic analysis. We combine traditional economic theory with advanced algorithmic intelligence to deliver insights that were previously impossible.</p>
+                    <p>Our platform specializes in the UK-Africa economic corridor, providing targeted intelligence for businesses, governments, and financial institutions operating in this dynamic space.</p>
                 </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Dr. Amina Yusuf</h3>
-                    <p class="position">Governance Reform Expert</p>
-                    <p>Advisor on ethical AI and public sector innovation across West Africa with 15+ years experience in governance and policy reform.</p>
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>To democratize access to sophisticated economic intelligence through algorithmic automation, making high-level strategic insights available to decision-makers across sectors.</p>
+                    <p>We believe in transparent, data-driven decision making that can drive sustainable economic development and cross-border collaboration.</p>
                 </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>James Okoro</h3>
-                    <p class="position">Civic Tech Leader</p>
-                    <p>Builds corruption early warning systems for local governments and NGOs, with a focus on transparency and citizen engagement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Strategic Features</h2>
-                <p>Comprehensive tools for economic intelligence and analysis</p>
-            </div>
-            <div class="content-card">
-                <h3><i class="fas fa-cogs"></i> Platform Capabilities</h3>
-                <ul class="feature-list">
-                    <li>Real-time corruption risk dashboards</li>
-                    <li>Segmented intelligence by region, sector, and institution</li>
-                    <li>Branded reports with automation-ready insights</li>
-                    <li>Modular scoring and compliance overlays</li>
-                </ul>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact AlgoEconomics</h2>
-                <p>Interested in early access, collaboration, or learning more? Reach out below and we'll be in touch.</p>
-            </div>
-            <div class="content-card">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="organization">Organization</label>
-                        <input type="text" id="organization" name="organization" />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+            <h2>Request Access</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Interest</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="border: none; cursor: pointer;">Submit Request</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>AlgoEconomics</h3>
-                    <p>Premium economic intelligence for UK–Africa decision-makers. Transforming data into actionable insights for economic governance and growth.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#what-it-does">What It Does</a></li>
-                        <li><a href="#features">Strategic Features</a></li>
-                        <li><a href="#speakers">Speakers</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">AI Corruption Index</a></li>
-                        <li><a href="#">Economic Forecasting</a></li>
-                        <li><a href="#">Risk Assessment</a></li>
-                        <li><a href="#">Custom Reports</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-envelope"></i> contact@algoeconomics.org</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> +02038974151</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> London UK </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AlgoEconomics. All rights reserved.</p>
-                <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Use</a></p>
-            </div>
+            <p>&copy; 2024 AlgoEconomics. All rights reserved.</p>
+            <p>Economic Intelligence for the Algorithmic Age</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Simple form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you shortly.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
