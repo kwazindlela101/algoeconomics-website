@@ -230,6 +230,7 @@ nav {
     max-width: 800px;
     margin: 0 auto 50px;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .enterprise-features {
@@ -250,7 +251,7 @@ nav {
 }
 
 .feature-box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .feature-box i {
@@ -267,7 +268,7 @@ nav {
     text-align: center;
 }
 
-/* How It Works Section */
+/* Fixed How It Works Section */
 .how-it-works-section {
     background: var(--white);
 }
@@ -284,7 +285,7 @@ nav {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 30px;
+    left: 40px;
     width: 4px;
     background: var(--light);
     z-index: 1;
@@ -292,12 +293,11 @@ nav {
 
 .workflow-steps li {
     background: var(--white);
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 25px 25px 25px 100px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     position: relative;
-    padding-left: 100px;
     z-index: 2;
     list-style: none;
 }
@@ -311,47 +311,100 @@ nav {
     transform: translateY(-50%);
     background: var(--secondary);
     color: var(--white);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     z-index: 3;
 }
 
-/* Add responsive design */
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
     }
 
     .mobile-menu {
         display: block;
     }
 
+    .hero {
+        padding: 150px 0 80px;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
     }
 
     .section-title h2 {
         font-size: 2rem;
     }
 
+    /* Fixed mobile steps */
     .workflow-steps li {
-        padding-left: 30px;
-    }
-
-    .workflow-steps li::before {
-        position: static;
-        transform: none;
+        padding: 70px 20px 20px 20px;
         margin-bottom: 15px;
-        display: inline-flex;
     }
-
+    
+    .workflow-steps li::before {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
     .workflow-steps::before {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .feature-box {
+        padding: 20px;
     }
 }
