@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary: #1a3a6c;
+    --primary: #051c38;  /* Changed to your dark blue */
     --secondary: #2c5aa0;
     --accent: #e74c3c;
     --light: #f8f9fa;
@@ -29,9 +29,9 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header - Now with dark blue */
 header {
-    background: var(--white);
+    background: var(--primary);  /* Dark blue header */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -49,7 +49,7 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--white);  /* White text for contrast */
 }
 
 .logo span {
@@ -63,18 +63,24 @@ nav {
 }
 
 .nav-links a {
-    color: var(--dark);
+    color: var(--white);  /* White text for contrast */
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
 }
 
 .mobile-menu {
     display: none;
+    color: var(--white);
 }
 
-/* Hero Section */
+/* Hero Section - Dark blue background */
 .hero {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #0a2a4d 100%);  /* Dark blue gradient */
     color: var(--white);
     padding: 150px 0 100px;
     text-align: center;
@@ -106,6 +112,8 @@ nav {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -114,7 +122,7 @@ nav {
 }
 
 .btn-primary:hover {
-    background: var(--primary);
+    background: #1e3d6f;
     transform: translateY(-2px);
 }
 
@@ -149,15 +157,28 @@ section {
     font-size: 1.1rem;
 }
 
-/* About Section */
+/* About Section - Now with dark blue background */
 .about-section {
-    background: var(--white);
+    background: var(--primary);  /* Dark blue background */
+    color: var(--white);  /* White text */
+}
+
+.about-section .section-title h2 {
+    color: var(--white);  /* White title */
+}
+
+.about-section .section-title p {
+    color: rgba(255,255,255,0.8);  /* Light text for description */
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+}
+
+.about-content p {
+    color: rgba(255,255,255,0.9);  /* Light text */
 }
 
 /* Enterprise Section */
@@ -201,9 +222,18 @@ section {
     text-align: center;
 }
 
-/* How It Works Section */
+/* How It Works Section - Now with dark blue background */
 .how-it-works-section {
-    background: var(--white);
+    background: var(--primary);  /* Dark blue background */
+    color: var(--white);  /* White text */
+}
+
+.how-it-works-section .section-title h2 {
+    color: var(--white);  /* White title */
+}
+
+.how-it-works-section .section-title p {
+    color: rgba(255,255,255,0.8);  /* Light text */
 }
 
 .workflow-steps {
@@ -215,13 +245,14 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    background: var(--light);
+    background: rgba(255,255,255,0.1);  /* Semi-transparent white */
     padding: 25px;
     border-radius: 10px;
+    border-left: 4px solid var(--accent);
 }
 
 .step-number {
-    background: var(--secondary);
+    background: var(--accent);
     color: var(--white);
     width: 50px;
     height: 50px;
@@ -237,17 +268,25 @@ section {
 
 .step-content h3 {
     margin-bottom: 0.5rem;
-    color: var(--dark);
+    color: var(--white);
 }
 
-/* Contact Section */
+.step-content p {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Contact Section - Dark blue background */
 .contact-section {
-    background: var(--dark);
+    background: var(--primary);  /* Dark blue background */
     color: var(--white);
 }
 
 .contact-section .section-title h2 {
     color: var(--white);
+}
+
+.contact-section .section-title p {
+    color: rgba(255,255,255,0.8);
 }
 
 .contact-content {
@@ -266,6 +305,7 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    color: rgba(255,255,255,0.9);
 }
 
 .contact-item i {
@@ -300,9 +340,9 @@ section {
     color: rgba(255,255,255,0.7);
 }
 
-/* Footer */
+/* Footer - Dark blue background */
 footer {
-    background: #1a252f;
+    background: var(--primary);  /* Dark blue background */
     color: var(--white);
     padding: 60px 0 30px;
 }
@@ -330,6 +370,7 @@ footer {
 .footer-column ul li a {
     color: rgba(255,255,255,0.7);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
